@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { groupTint, type MenuItem } from "@/lib/menu";
 import { Monogram } from "../Monogram";
+import { withBase } from "@/lib/base";
 
 type Props = {
   item: MenuItem;
@@ -15,7 +16,8 @@ type Props = {
 };
 
 export const dishSrc = (item: MenuItem, available: Set<string>) =>
-  item.img ?? (available.has(item.slug) ? `/menu/${item.slug}.webp` : null);
+  (item.img ? withBase(item.img) : null) ??
+  (available.has(item.slug) ? withBase(`/menu/${item.slug}.webp`) : null);
 
 export default function DishImage({ item, available, sizes, className = "", imgClassName = "" }: Props) {
   const src = dishSrc(item, available);

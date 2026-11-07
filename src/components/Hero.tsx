@@ -4,13 +4,14 @@ import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { site } from "@/lib/site";
 import { drawPour } from "@/lib/pour";
+import { withBase } from "@/lib/base";
 
 const { frameCount, framePath, frameExt, focusY } = site.hero;
 const heroVideo = site.hero.video;
 const isPhone = () =>
   typeof window !== "undefined" &&
   (window.matchMedia("(pointer: coarse)").matches || window.innerWidth <= 860);
-const frameSrc = (i: number) => `${framePath}${String(i + 1).padStart(4, "0")}.${frameExt}`;
+const frameSrc = (i: number) => withBase(`${framePath}${String(i + 1).padStart(4, "0")}.${frameExt}`);
 
 function reportProgress(p: number) {
   window.__heroProgress = p;

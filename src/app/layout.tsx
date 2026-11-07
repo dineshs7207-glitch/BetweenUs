@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
+import { withBase } from "@/lib/base";
 
 const outfit = Outfit({
   subsets: ["latin", "latin-ext"],
@@ -22,7 +23,7 @@ const serif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://betwen-us.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dineshs7207-glitch.github.io/BetweenUs/"),
   title: {
     default: `${site.name}, café in ${site.area}`,
     template: `%s · ${site.name}`,
@@ -63,7 +64,10 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={`${outfit.variable} ${serif.variable}`}>
-      <body className="font-sans">
+      <body
+        className="font-sans"
+        style={{ ["--monogram-url" as string]: `url("${withBase("/brand/monogram.png")}")` }}
+      >
         <SmoothScroll>
           <Nav />
           {children}

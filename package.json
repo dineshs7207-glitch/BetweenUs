@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "frames": "bash scripts/extract-frames.sh",
     "prompts": "node scripts/make-higgsfield-prompts.mjs",
-    "hero:self-host": "node scripts/self-host-hero.mjs"
+    "hero:self-host": "node scripts/self-host-hero.mjs",
+    "build:pages": "STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/BetweenUs next build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",

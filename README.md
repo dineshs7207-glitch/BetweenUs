@@ -5,6 +5,8 @@ Website for Betwēn Us, a café in Kondapur, Hyderabad. *For pauses and conversa
 Next.js 14 (App Router, TypeScript, Tailwind), GSAP + ScrollTrigger, Lenis, Framer Motion and
 React Three Fiber. The original build brief is in [`docs/BRIEF.md`](docs/BRIEF.md); the project handbook (what was built, decisions, open items, how to resume) is [`CLAUDE.md`](CLAUDE.md). To continue in a new Claude Code session, open this repo and say "start".
 
+**Live:** https://dineshs7207-glitch.github.io/BetweenUs/ (GitHub Pages, deployed by `.github/workflows/deploy-pages.yml`)
+
 ## Run it
 
 ```bash

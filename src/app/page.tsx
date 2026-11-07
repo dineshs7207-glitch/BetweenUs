@@ -8,13 +8,14 @@ import TheRoom from "@/components/TheRoom";
 import Lounge from "@/components/Lounge";
 import Visit from "@/components/Visit";
 import { listPublic } from "@/lib/assets";
+import { withBase } from "@/lib/base";
 import { loungePhoto, roomRowOne, roomRowTwo, visitPhoto } from "@/lib/gallery";
 
 export default function Home() {
   const gallery = new Set(listPublic("gallery"));
   const dishes = new Set(listPublic("dishes"));
-  const g = (file: string) => (gallery.has(file) ? `/gallery/${file}` : null);
-  const d = (slug: string) => (dishes.has(`${slug}.webp`) ? `/dishes/${slug}.webp` : null);
+  const g = (file: string) => (gallery.has(file) ? withBase(`/gallery/${file}`) : null);
+  const d = (slug: string) => (dishes.has(`${slug}.webp`) ? withBase(`/dishes/${slug}.webp`) : null);
 
   const notes: FieldNote[] = [
     {

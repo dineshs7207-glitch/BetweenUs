@@ -67,8 +67,9 @@ body {
   display: inline-block;
   aspect-ratio: 820 / 1050;
   background-color: currentColor;
-  -webkit-mask: url("/brand/monogram.png") center / contain no-repeat;
-  mask: url("/brand/monogram.png") center / contain no-repeat;
+  /* --monogram-url is set on <body> in layout.tsx so it respects the base path */
+  -webkit-mask: var(--monogram-url) center / contain no-repeat;
+  mask: var(--monogram-url) center / contain no-repeat;
 }
 
 .sr-only-focusable:not(:focus) {

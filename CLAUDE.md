@@ -6,7 +6,8 @@ why, what's left, and how to get it running.
 
 - **Owner:** Dinesh Sarikonda (GitHub `dineshs7207-glitch`)
 - **Repo:** https://github.com/dineshs7207-glitch/BetweenUs
-- **Working branch:** `claude/loving-mccarthy-tw913v` (all work so far; not yet merged to `main`)
+- **Working branch:** `claude/loving-mccarthy-tw913v` (currently the repo's only and default branch; there is no `main` yet)
+- **Live site:** https://dineshs7207-glitch.github.io/BetweenUs/ (GitHub Pages via Actions)
 - **Original spec:** [`docs/BRIEF.md`](docs/BRIEF.md). Treat it as the design source of
   truth for colours, fonts, copy, section order and behaviour. This file records what
   was actually built, including the deliberate deviations (section 9).
@@ -85,9 +86,18 @@ npm run typecheck      # tsc --noEmit
 npm run prompts        # writes scripts/higgsfield-prompts.json (one prompt per dish w/o photo)
 npm run frames -- hero.mp4 30 1600   # video → public/hero/frames (fallback hero mode)
 npm run hero:self-host # copy hero film/posters from Higgsfield CDN into public/hero + rewrite site.ts
+npm run build:pages    # static export into ./out, served under /BetweenUs (what GitHub Pages runs)
 ```
 
-Deploy on Vercel: import the repo, the framework is auto-detected, no env vars are
+**Live site (GitHub Pages):** https://dineshs7207-glitch.github.io/BetweenUs/
+Deployed by `.github/workflows/deploy-pages.yml` on every push to
+`claude/loving-mccarthy-tw913v` or `main` (or run it manually from the Actions tab).
+The workflow typechecks, builds with `STATIC_EXPORT=1` and
+`NEXT_PUBLIC_BASE_PATH=/BetweenUs`, and deploys `./out`. Because the site lives under
+a sub-path, **any raw public-file path (img src, CSS url, video src) must go through
+`withBase()` from `src/lib/base.ts`**; `next/link` hrefs are prefixed automatically.
+
+Alternative host, Vercel: import the repo, the framework is auto-detected, no env vars are
 needed (optionally set `NEXT_PUBLIC_SITE_URL` for OG links). Vercel deploys `main` by
 default, so either merge the branch or set the production branch in Vercel.
 
@@ -262,7 +272,7 @@ Assets:
 
 Engineering:
 - `npm run hero:self-host` and commit (removes the CDN dependency)
-- Merge `claude/loving-mccarthy-tw913v` → `main`, deploy to Vercel, run Lighthouse on mobile
+- Optionally create `main` from `claude/loving-mccarthy-tw913v`; run Lighthouse on mobile against the live Pages URL
   (targets: Perf 85+, A11y 95+, BP 95+, SEO 95+), test on a real iPhone and Android phone
 - Optional: a REVIEW.md second pass after the real photos land
 

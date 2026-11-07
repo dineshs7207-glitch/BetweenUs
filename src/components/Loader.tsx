@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { site } from "@/lib/site";
 import { lockScroll } from "./SmoothScroll";
+import { withBase } from "@/lib/base";
 
 const SEEN_KEY = "betwen-intro-seen";
 const MAX_MS = 9000;
@@ -126,7 +127,7 @@ export default function Loader() {
           (site.intro.video ? (
             <video
               ref={videoRef}
-              src={site.intro.video}
+              src={withBase(site.intro.video)}
               muted
               playsInline
               autoPlay
