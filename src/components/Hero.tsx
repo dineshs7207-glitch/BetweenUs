@@ -101,7 +101,7 @@ export default function Hero() {
     let cur = 0;
 
     reportProgress(0);
-    const useDirect = () => {
+    const playDirect = () => {
       // Cross-origin host without CORS: play straight from the URL
       v.src = url;
       v.load();
@@ -131,7 +131,7 @@ export default function Hero() {
         v.load();
         reportProgress(1);
       } catch {
-        if (!cancelled) useDirect();
+        if (!cancelled) playDirect();
       }
     })();
 
