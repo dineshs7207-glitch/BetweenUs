@@ -3,7 +3,7 @@
 Website for Betwēn Us, a café in Kondapur, Hyderabad. *For pauses and conversations in betwēn.*
 
 Next.js 14 (App Router, TypeScript, Tailwind), GSAP + ScrollTrigger, Lenis, Framer Motion and
-React Three Fiber. The full build brief is in [`CLAUDE.md`](CLAUDE.md).
+React Three Fiber. The original build brief is in [`docs/BRIEF.md`](docs/BRIEF.md); the project handbook (what was built, decisions, open items, how to resume) is [`CLAUDE.md`](CLAUDE.md). To continue in a new Claude Code session, open this repo and say "start".
 
 ## Run it
 
