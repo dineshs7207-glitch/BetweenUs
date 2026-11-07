@@ -9,7 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "frames": "bash scripts/extract-frames.sh",
-    "prompts": "node scripts/make-higgsfield-prompts.mjs"
+    "prompts": "node scripts/make-higgsfield-prompts.mjs",
+    "hero:self-host": "node scripts/self-host-hero.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",

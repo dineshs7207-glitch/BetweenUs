@@ -6,6 +6,10 @@ import { site } from "@/lib/site";
 import { drawPour } from "@/lib/pour";
 
 const { frameCount, framePath, frameExt, focusY } = site.hero;
+const heroVideo = site.hero.video;
+const isPhone = () =>
+  typeof window !== "undefined" &&
+  (window.matchMedia("(pointer: coarse)").matches || window.innerWidth <= 860);
 const frameSrc = (i: number) => `${framePath}${String(i + 1).padStart(4, "0")}.${frameExt}`;
 
 function reportProgress(p: number) {
@@ -20,6 +24,7 @@ export default function Hero() {
   const frames = useRef<HTMLImageElement[]>([]);
   const progress = useRef({ p: 0 });
   const lastDrawn = useRef(-1);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const draw = useRef((force = false) => {});
   draw.current = (force = false) => {
@@ -58,6 +63,7 @@ export default function Hero() {
 
   // Size the canvas to the viewport (DPR capped at 2)
   useEffect(() => {
+    if (heroVideo) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const resize = () => {
@@ -78,8 +84,99 @@ export default function Hero() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  // Hero film: load it whole as a Blob (always seekable, even where the host
+  // has no byte-range support), then scrub currentTime from scroll. Technique
+  // from the scroll-world scrub engine: lerp toward the target, never queue a
+  // seek while the decoder is still seeking, prime on first touch for iOS.
+  useEffect(() => {
+    if (!heroVideo) return;
+    const v = videoRef.current;
+    if (!v) return;
+    const phone = isPhone();
+    const url = (phone && heroVideo.mobile) || heroVideo.desktop;
+    v.poster = (phone && heroVideo.posterMobile) || heroVideo.poster;
+    let cancelled = false;
+    let objectUrl: string | null = null;
+    let raf = 0;
+    let cur = 0;
+
+    reportProgress(0);
+    const useDirect = () => {
+      // Cross-origin host without CORS: play straight from the URL
+      v.src = url;
+      v.load();
+      const onReady = () => reportProgress(1);
+      v.addEventListener("canplaythrough", onReady, { once: true });
+      v.addEventListener("error", onReady, { once: true });
+    };
+
+    (async () => {
+      try {
+        const res = await fetch(url);
+        if (!res.ok || !res.body) throw new Error(String(res.status));
+        const total = Number(res.headers.get("content-length")) || 0;
+        const reader = res.body.getReader();
+        const chunks: Uint8Array[] = [];
+        let got = 0;
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          got += value.length;
+          if (total) reportProgress(Math.min(0.99, got / total));
+        }
+        if (cancelled) return;
+        objectUrl = URL.createObjectURL(new Blob(chunks as BlobPart[], { type: "video/mp4" }));
+        v.src = objectUrl;
+        v.load();
+        reportProgress(1);
+      } catch {
+        if (!cancelled) useDirect();
+      }
+    })();
+
+    const reveal = () => section.current?.setAttribute("data-video-ready", "");
+    v.addEventListener("seeked", reveal, { once: true });
+    v.addEventListener("loadeddata", () => {
+      try { v.pause(); } catch {}
+      reveal();
+    }, { once: true });
+
+    const prime = () => {
+      if (!isPhone()) return;
+      try {
+        const pr = v.play();
+        if (pr && pr.then) pr.then(() => v.pause()).catch(() => {});
+      } catch {}
+    };
+    window.addEventListener("touchstart", prime, { once: true, passive: true });
+    window.addEventListener("pointerdown", prime, { once: true, passive: true });
+
+    const tick = () => {
+      raf = requestAnimationFrame(tick);
+      if (!v.duration || v.seeking || v.readyState < 1) return;
+      const target = progress.current.p;
+      cur += (target - cur) * (prefersReducedMotion() ? 1 : 0.2);
+      const t = Math.min(cur, 0.999) * v.duration;
+      const eps = isPhone() ? 0.02 : 0.008;
+      if (Math.abs(v.currentTime - t) > eps) {
+        try { v.currentTime = t; } catch {}
+      }
+    };
+    raf = requestAnimationFrame(tick);
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+      window.removeEventListener("touchstart", prime);
+      window.removeEventListener("pointerdown", prime);
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, []);
+
   // Preload frames, report progress to the loader
   useEffect(() => {
+    if (heroVideo) return;
     if (frameCount === 0) {
       reportProgress(1);
       return;
@@ -175,11 +272,24 @@ export default function Hero() {
         className="absolute left-1/2 top-1/2 z-0 h-[clamp(230px,46svh,560px)] w-[clamp(150px,44vw,340px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-maroon-deep sm:h-[clamp(230px,58svh,560px)] sm:w-[clamp(150px,22vw,340px)]"
         style={{ borderRadius: "999px 999px 28px 28px" }}
       >
-        <canvas
-          ref={canvasRef}
-          aria-hidden="true"
-          className="absolute left-1/2 top-1/2 h-[100vh] w-[100vw] -translate-x-1/2 -translate-y-1/2"
-        />
+        {heroVideo ? (
+          <video
+            ref={videoRef}
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            tabIndex={-1}
+            className="absolute left-1/2 top-1/2 h-[100vh] w-[100vw] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover"
+            style={{ objectPosition: `50% ${heroVideo.focusY * 100}%` }}
+          />
+        ) : (
+          <canvas
+            ref={canvasRef}
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 h-[100vh] w-[100vw] -translate-x-1/2 -translate-y-1/2"
+          />
+        )}
         <div
           data-shade
           aria-hidden="true"

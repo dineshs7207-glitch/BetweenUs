@@ -26,6 +26,24 @@ export const site = {
   },
   hero: {
     /**
+     * Cinematic hero film (Higgsfield: GPT Image 2.6 keyframes + Kling 3.0),
+     * scrubbed by scroll. Takes priority over frames and the coded pour.
+     * Set to null to fall back to frames / the coded pour.
+     */
+    video: {
+      desktop: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/6ca8f78e-f133-45df-94a8-976b3c5fa104.mp4",
+      mobile: undefined as string | undefined,
+      posterMobile: undefined as string | undefined,
+      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/53a7c94b-6de3-4b8f-b571-4fb016bd99b0.jpg",
+      focusY: 0.5,
+    } as null | {
+      desktop: string;
+      mobile?: string;
+      poster: string;
+      posterMobile?: string;
+      focusY: number;
+    },
+    /**
      * Number of WebP frames in /public/hero/frames (0001.webp …).
      * 0 = no frames yet: the hero draws a coded coffee pour instead.
      * After `npm run frames -- hero.mp4 30 1600`, set this to the printed count.
