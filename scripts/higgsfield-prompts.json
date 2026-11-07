@@ -1,0 +1,625 @@
+[
+  {
+    "slug": "espresso",
+    "file": "public/menu/espresso.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Espresso: A bold 30ml extraction with thick crema and deep, lingering intensity, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "americano",
+    "file": "public/menu/americano.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Americano: Smooth espresso lengthened with hot water for a clean, balanced finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "cappuccino",
+    "file": "public/menu/cappuccino.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Cappuccino: Equal harmony of espresso, steamed milk, and silky microfoam, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "latte",
+    "file": "public/menu/latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Latte: Smooth espresso blended with steamed milk and a light creamy foam, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "flat-white",
+    "file": "public/menu/flat-white.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Flat White: Velvety espresso with silky steamed milk and a smooth finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mocha",
+    "file": "public/menu/mocha.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mocha: Espresso blended with rich dark cocoa, steamed milk, and topped with whipped cream, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "cortado",
+    "file": "public/menu/cortado.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Cortado: Equal parts espresso and warm milk, bold yet refined, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "macchiato",
+    "file": "public/menu/macchiato.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Macchiato: An espresso “stained” with delicate milk foam, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "iced-americano",
+    "file": "public/menu/iced-americano.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Iced Americano: Chilled espresso over ice with a crisp, refreshing finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "iced-latte",
+    "file": "public/menu/iced-latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Iced Latte: Cold milk and espresso layered smoothly over ice, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "iced-mocha",
+    "file": "public/menu/iced-mocha.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Iced Mocha: Chocolate-infused iced latte with a creamy finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "cold-coffee",
+    "file": "public/menu/cold-coffee.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Cold Coffee: Blended vanilla ice cream, espresso, and milk for a smooth, creamy, refreshing finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "orange-espresso",
+    "file": "public/menu/orange-espresso.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Orange Espresso: Fresh citrus brightness layered with bold espresso, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "cranberry-coffee",
+    "file": "public/menu/cranberry-coffee.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Cranberry Coffee: Sweet-tart cranberry notes meeting chilled espresso, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "coconut-coffee",
+    "file": "public/menu/coconut-coffee.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Coconut Coffee: Espresso blended with chilled coconut and milk for a smooth tropical refreshment, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "tonic-espresso",
+    "file": "public/menu/tonic-espresso.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Tonic Espresso: Espresso poured over chilled tonic water for a crisp, refreshing coffee tonic, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "classic-cold-brew",
+    "file": "public/menu/classic-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Classic Cold Brew: 12–16 hour slow extraction for smooth strength, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "vanilla-cream-cold-brew",
+    "file": "public/menu/vanilla-cream-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Vanilla Cream Cold Brew: Smooth cold brew topped with sweet vanilla cream for a rich and refreshing coffee experience, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "salted-caramel-cold-brew",
+    "file": "public/menu/salted-caramel-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Salted Caramel Cold Brew: Smooth cold brew with rich salted caramel notes for a bold, sweet, and refreshing finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "cranberry-cold-brew",
+    "file": "public/menu/cranberry-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Cranberry Cold Brew: Cold brew with added cranberry juice, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "tonic-cold-brew",
+    "file": "public/menu/tonic-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Tonic Cold Brew: Refreshing cold brew topped with tonic water for a crisp finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "orange-cold-brew",
+    "file": "public/menu/orange-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Orange Cold Brew: Citrusy cold brew infused with refreshing orange and bold coffee notes, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "coconut-cold-brew",
+    "file": "public/menu/coconut-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Coconut Cold Brew: Smooth cold brew blended with creamy coconut for a refreshing tropical coffee experience, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "velvet-cold-brew",
+    "file": "public/menu/velvet-cold-brew.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Velvet Cold Brew: 12-hour slow-steeped cold brew topped with vanilla cream, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "classic-coffee-frappe",
+    "file": "public/menu/classic-coffee-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Classic Coffee Frappe: Blended iced coffee topped with soft whipped cream, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mocha-frappe",
+    "file": "public/menu/mocha-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mocha Frappe: Coffee and dark chocolate blended smooth and indulgent, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "caramel-frappe",
+    "file": "public/menu/caramel-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Caramel Frappe: Buttery caramel fused with creamy coffee, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "hazelnut-frappe",
+    "file": "public/menu/hazelnut-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Hazelnut Frappe: Nutty, aromatic, and luxuriously smooth, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "oreo-frappe",
+    "file": "public/menu/oreo-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Oreo Frappe: Crushed cookies blended into a rich chocolate base, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "dark-chocolate-frappe",
+    "file": "public/menu/dark-chocolate-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Dark Chocolate Frappe: Deep cocoa intensity with a thick, velvety texture, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "kitkat-frappe",
+    "file": "public/menu/kitkat-frappe.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "KitKat Frappe: Chocolate wafer blended into a creamy dessert-style drink, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "biscoff-latte",
+    "file": "public/menu/biscoff-latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Biscoff Latte: Espresso blended with creamy milk and rich Biscoff flavour for a smooth caramelised finish, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "betwen-us-latte",
+    "file": "public/menu/betwen-us-latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Betwēn Us Latte: Caramelized white chocolate blended with espresso and crowned with sea salt foam, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "spanish-latte",
+    "file": "public/menu/spanish-latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Spanish Latte: Velvety espresso sweetened with condensed milk, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "vietnamese-iced-coffee",
+    "file": "public/menu/vietnamese-iced-coffee.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Vietnamese Iced Coffee: Strong brew layered over condensed milk, bold and sweet, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "orange-latte",
+    "file": "public/menu/orange-latte.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Orange Latte: Espresso blended with orange juice, milk, and condensed milk for a creamy citrusy latte, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "midnight-mocha",
+    "file": "public/menu/midnight-mocha.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Midnight Mocha: Dark cocoa layered with double espresso intensity, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "affogato-2-0",
+    "file": "public/menu/affogato-2-0.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Affogato 2.0: Hot espresso poured over creamy vanilla ice cream, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "hazelnut-affogato",
+    "file": "public/menu/hazelnut-affogato.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Hazelnut Affogato: Vanilla ice cream topped with espresso and rich hazelnut flavour for a creamy indulgent treat, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "caramel-affogato",
+    "file": "public/menu/caramel-affogato.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Caramel Affogato: A simple, indulgent Italian-style dessert combining hot espresso and cold ice cream, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mocha-affogato",
+    "file": "public/menu/mocha-affogato.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mocha Affogato: An indulgent Italian-inspired dessert that combines a scoop of ice cream or gelato drowned in a hot shot of espresso and rich chocolate, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "pour-over-v60",
+    "file": "public/menu/pour-over-v60.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Pour Over (V60): Clean, aromatic single-origin extraction highlighting delicate notes, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "french-press",
+    "file": "public/menu/french-press.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "French Press: Full-bodied immersion brew with deeper texture, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "aeropress",
+    "file": "public/menu/aeropress.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "AeroPress: Balanced, smooth pressure brew with clarity, in a ceramic cup or a clear takeaway tumbler as suits the drink. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "bharwan-paneer-tikka",
+    "file": "public/menu/bharwan-paneer-tikka.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Bharwan Paneer Tikka: From our Field Notes, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "kung-pao-rice-bowl",
+    "file": "public/menu/kung-pao-rice-bowl.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Kung Pao Rice Bowl: From our Field Notes, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "asian-green-fried-rice",
+    "file": "public/menu/asian-green-fried-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Asian Green Fried Rice: Herbaceous green fried rice with crisp vegetables and aromatic Asian seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "szechwan-rice",
+    "file": "public/menu/szechwan-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Szechwan Rice: Spicy Schezwan rice tossed with vegetables and bold Indo-Chinese flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "singapore-rice",
+    "file": "public/menu/singapore-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Singapore Rice: Aromatic Singapore fried rice with vegetables, curry spice, and bold flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "burnt-garlic-rice",
+    "file": "public/menu/burnt-garlic-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Burnt Garlic Rice: Smoky fried rice tossed with crispy burnt garlic and savory seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "hakka-noodles",
+    "file": "public/menu/hakka-noodles.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Hakka Noodles: Wok-tossed Hakka noodles with vegetables, sauces, and classic Asian flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "szechwan-noodles",
+    "file": "public/menu/szechwan-noodles.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Szechwan Noodles: Spicy Szechwan noodles tossed with vegetables and bold fiery sauces, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mongolian-noodles",
+    "file": "public/menu/mongolian-noodles.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mongolian Noodles: Savory Mongolian noodles tossed with vegetables in a rich, smoky sauce, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "dragon-noodles",
+    "file": "public/menu/dragon-noodles.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Dragon Noodles: Fiery noodles tossed with herbs, vegetables, and bold Asian flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "thai-chili-garlic-noodles",
+    "file": "public/menu/thai-chili-garlic-noodles.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Thai Chili Garlic Noodles: Spicy Thai noodles tossed with garlic, chili, and savory Asian flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "stroganoff",
+    "file": "public/menu/stroganoff.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Stroganoff: Creamy Stroganoff pasta with rich, savory sauce and herb flavors, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "betwen-us-bowl",
+    "file": "public/menu/betwen-us-bowl.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Betwēn Us Bowl: Comforting rice bowl layered with wholesome flavors and hearty goodness, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "burnt-garlic-fried-rice",
+    "file": "public/menu/burnt-garlic-fried-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Burnt Garlic Fried Rice: Smoky fried rice tossed with crispy burnt garlic and savory seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "shanghai-rice",
+    "file": "public/menu/shanghai-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Shanghai Rice: Comforting rice dish with stir-fried leafy greens and savory home-style flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "kung-pao-rice",
+    "file": "public/menu/kung-pao-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Kung Pao Rice: Spicy, sweet Kung Pao-style rice tossed with bold Sichuan-inspired flavours, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "ginger-capsicum-rice",
+    "file": "public/menu/ginger-capsicum-rice.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Ginger Capsicum Rice: Fragrant ginger capsicum rice tossed with vegetables and savory Asian seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "chili-sauce-gravy",
+    "file": "public/menu/chili-sauce-gravy.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Chili Sauce Gravy: Spicy chili gravy with bold flavors, perfect for Indo-Chinese dishes, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "manchurian-gravy",
+    "file": "public/menu/manchurian-gravy.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Manchurian Gravy: Rich Manchurian gravy with savory flavors and classic Indo-Chinese seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "kung-pao-gravy",
+    "file": "public/menu/kung-pao-gravy.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Kung Pao Gravy: Spicy Kung Pao gravy with sweet, tangy, and savory Asian flavors, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "schezwan-gravy",
+    "file": "public/menu/schezwan-gravy.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Schezwan Gravy: Fiery Schezwan gravy with bold chili flavors and savory seasoning, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "spaghetti-aglio-e-olio",
+    "file": "public/menu/spaghetti-aglio-e-olio.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Spaghetti Aglio e Olio: Classic spaghetti tossed with garlic, olive oil, chili, and herbs, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "alfredo-pasta",
+    "file": "public/menu/alfredo-pasta.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Alfredo Pasta: Creamy Alfredo pasta tossed in rich cheese sauce and herbs, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "pink-sauce-pasta",
+    "file": "public/menu/pink-sauce-pasta.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Pink Sauce Pasta: Creamy pink sauce pasta with rich tomato and cheese flavors, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "spinach-green-chili-pasta",
+    "file": "public/menu/spinach-green-chili-pasta.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Spinach Green Chili Pasta: Creamy spinach chili pasta with herbs and bold, savory flavors, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "paneer-tikka-romesco",
+    "file": "public/menu/paneer-tikka-romesco.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Paneer Tikka Romesco: Grilled paneer tikka, romesco sauce, lettuce, cheese melt, mayo, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "ceylon-grilled-chicken",
+    "file": "public/menu/ceylon-grilled-chicken.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Ceylon Grilled Chicken: Spicy green chilli grilled chicken breast, cheese, onion, tomato, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "caprese",
+    "file": "public/menu/caprese.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Caprese: Mozzarella cheese, tomato slices, pesto, olive oil, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "creamy-utah-mushrooms",
+    "file": "public/menu/creamy-utah-mushrooms.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Creamy Utah Mushrooms: Button mushrooms, creamy curried sauce, spinach, corn, plated in a wide stoneware bowl or plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "walnut-brownie",
+    "file": "public/menu/walnut-brownie.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Walnut Brownie: Fudgy chocolate brownie with crunchy walnuts, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "biscoff-cheesecake",
+    "file": "public/menu/biscoff-cheesecake.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Biscoff Cheesecake: Creamy cheesecake layered with rich Biscoff flavour and biscuit crumble, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "basque-cheesecake",
+    "file": "public/menu/basque-cheesecake.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Basque Cheesecake: Caramelized, creamy Basque cheesecake with a rich, velvety melt-in-mouth finish, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "hazelnut-cake",
+    "file": "public/menu/hazelnut-cake.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Hazelnut Cake: Soft hazelnut cake with rich nutty flavour and a smooth creamy finish, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "tiramisu",
+    "file": "public/menu/tiramisu.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Tiramisu: Classic coffee dessert layered with cream and delicate cocoa flavours, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "coffee-mousse",
+    "file": "public/menu/coffee-mousse.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Coffee Mousse: Light and creamy coffee mousse with a smooth rich finish, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "biscoff-cookie",
+    "file": "public/menu/biscoff-cookie.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Biscoff Cookie: Crunchy cookie with rich caramelised Biscoff flavour, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "macarons",
+    "file": "public/menu/macarons.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Macarons: Delicate French macarons with crisp shells, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "vanilla-muffin",
+    "file": "public/menu/vanilla-muffin.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Vanilla Muffin: Soft vanilla muffin with a light, buttery sweetness, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "hazelnut-crumble",
+    "file": "public/menu/hazelnut-crumble.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Hazelnut Crumble: Crunchy hazelnut crumble with rich buttery sweetness, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "chocolate-tart",
+    "file": "public/menu/chocolate-tart.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Chocolate Tart: Rich chocolate tart with a smooth decadent filling, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mango-panna-cotta",
+    "file": "public/menu/mango-panna-cotta.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mango Panna Cotta: Creamy panna cotta topped with sweet mango flavours, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "celebration-cakes",
+    "file": "public/menu/celebration-cakes.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Celebration Cakes: 500 grams / 1 kg, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mangomisu",
+    "file": "public/menu/mangomisu.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mangomisu, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mango-mousse",
+    "file": "public/menu/mango-mousse.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mango Mousse, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  },
+  {
+    "slug": "mango-tart",
+    "file": "public/menu/mango-tart.webp",
+    "model": "gpt_image_2_6",
+    "aspect_ratio": "1:1",
+    "prompt": "Mango Tart, on a small dark slate or stoneware plate. Editorial food photograph for Betwēn Us café, Hyderabad. Shot from a 45 degree angle on handmade sand-coloured stoneware, warm white linen surface, soft window daylight from the left, shallow depth of field, natural colours, a small edible flower garnish, no text, no logos, no hands, square 1:1 composition."
+  }
+]

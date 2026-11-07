@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.env*.local
+.DS_Store
+# raw source video for frame extraction stays out of the repo
+/hero.mp4
+/hero-*.mp4
