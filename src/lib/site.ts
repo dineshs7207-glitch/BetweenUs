@@ -32,8 +32,8 @@ export const site = {
      */
     video: {
       desktop: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/6ca8f78e-f133-45df-94a8-976b3c5fa104.mp4",
-      mobile: undefined as string | undefined,
-      posterMobile: undefined as string | undefined,
+      mobile: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/8deedcfd-04ed-4747-ac27-070b4abaf54c.mp4" as string | undefined,
+      posterMobile: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/bd5ee0a0-1a84-4f76-9df2-10bb442a2475.jpg" as string | undefined,
       poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/53a7c94b-6de3-4b8f-b571-4fb016bd99b0.jpg",
       focusY: 0.5,
     } as null | {
