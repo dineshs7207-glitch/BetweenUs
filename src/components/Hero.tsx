@@ -245,7 +245,17 @@ export default function Hero() {
           },
           0.12,
         )
-        .to(q("[data-shade]"), { autoAlpha: 1, duration: 0.15 }, 0.55)
+        .to(q("[data-shade]"), { autoAlpha: 1, duration: 0.15 }, 0.55);
+
+      // Phones: the portrait film's cup sits low in the frame, so while the arch
+      // is narrow, lift the film until the BB monogram shows, then settle as it opens.
+      if (heroVideo && window.innerWidth < 640) {
+        const film = q("[data-film]");
+        gsap.set(film, { y: () => -window.innerHeight * 0.16 });
+        tl.to(film, { y: 0, ease: "power2.inOut", duration: 0.5 }, 0.12);
+      }
+
+      tl
         .to(q("[data-tag]"), { autoAlpha: 1, y: 0, duration: 0.14, stagger: 0.08, ease: "power2.out" }, 0.62);
 
       // Refresh once the loader has gone so pin spacing is measured correctly
@@ -273,6 +283,7 @@ export default function Hero() {
         style={{ borderRadius: "999px 999px 28px 28px" }}
       >
         {heroVideo ? (
+          <div data-film className="absolute inset-0">
           <video
             ref={videoRef}
             muted
@@ -283,6 +294,7 @@ export default function Hero() {
             className="absolute left-1/2 top-1/2 h-[100vh] w-[100vw] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover"
             style={{ objectPosition: `50% ${heroVideo.focusY * 100}%` }}
           />
+          </div>
         ) : (
           <canvas
             ref={canvasRef}

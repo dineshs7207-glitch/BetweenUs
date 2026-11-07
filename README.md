@@ -38,9 +38,14 @@ you can drop files in one at a time and redeploy.
   spinach-green-chilli-pasta, summer-mango-desserts). achari-caesar-salad is already in.
 - **Dish photos**: `npm run prompts` writes `scripts/higgsfield-prompts.json` (one GPT Image 2.6
   prompt per dish). Save results as `public/menu/<slug>.webp` (≤1000px, quality ~80).
-- **Hero video**: generate in Higgsfield (prompt in CLAUDE.md §5), save as `hero.mp4` in the
-  project root, run `npm run frames -- hero.mp4 30 1600`, then set `hero.frameCount` in
-  `src/lib/site.ts` to the printed count. Until then the hero draws a coded espresso pour.
+- **Hero film** (done): a cinematic, scroll-scrubbed film made in Higgsfield, using the
+  scroll-world method. GPT Image 2.6 made the first and last keyframes (beans pouring into a
+  speckled cup carrying the Betwēn Us BB monogram, then the same cup with a rosetta latte);
+  Kling 3.0 Pro rendered the 8 s film locked between them. There are two versions: 16:9 for
+  desktop (1440px, 4.4 MB) and a native 9:16 one for phones (720px, 3.1 MB). The hero loads the
+  film whole and scrubs it with scroll. Files currently live on Higgsfield's CDN (URLs in
+  `src/lib/site.ts`); run `npm run hero:self-host` from a machine that can reach that host to
+  copy them into `public/hero/` and switch the config to local paths.
 - **Intro film**: put `logo-pour.mp4` in `public/video/` and set `intro.video` in
   `src/lib/site.ts` to `"/video/logo-pour.mp4"`. Until then the intro is a coded monogram pour.
 - **Wordmark**: the "Betwēn us" wordmark is set in Outfit for now; swap in the cut
