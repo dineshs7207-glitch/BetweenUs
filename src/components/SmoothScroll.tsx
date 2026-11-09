@@ -18,6 +18,13 @@ export function lockScroll(locked: boolean) {
   document.documentElement.style.overflow = on ? "hidden" : "";
 }
 
+/** Jump straight to the top (every visit starts on the hero). */
+export function resetToTop() {
+  try { history.scrollRestoration = "manual"; } catch {}
+  lenis?.scrollTo(0, { immediate: true, force: true });
+  window.scrollTo(0, 0);
+}
+
 export function scrollToTarget(target: string | HTMLElement | number, offset = 0) {
   if (lenis) {
     lenis.scrollTo(target, { offset, duration: 1.1 });
@@ -36,6 +43,7 @@ export function scrollToTarget(target: string | HTMLElement | number, offset = 0
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
+    resetToTop();
     if (prefersReducedMotion()) return;
 
     const instance = new Lenis({ lerp: 0.14, wheelMultiplier: 1.1, touchMultiplier: 1.4, anchors: { offset: -72 } });

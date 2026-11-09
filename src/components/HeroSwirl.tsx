@@ -3,6 +3,10 @@
 import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { site } from "@/lib/site";
+import { playOnce, scrubLoop } from "@/lib/sound";
+
+const FEATHER =
+  "linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent), linear-gradient(to right, transparent, #000 5%, #000 95%, transparent)";
 
 function reportProgress(p: number) {
   window.__heroProgress = p;
@@ -110,14 +114,32 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
           invalidateOnRefresh: true,
         },
       });
-      tl.to(progress.current, { p: 1, duration: 0.86 }, 0)
+      const beans = scrubLoop("beans", 0.75);
+      const pour = scrubLoop("pour", 0.55);
+      let cupPlayed = false;
+      tl.to(progress.current, {
+        p: 1,
+        duration: 0.86,
+        onUpdate: () => {
+          // Beans rattle while they swirl, then the pour as the latte forms
+          const p = progress.current.p;
+          beans.feed(p, p < 0.6);
+          pour.feed(p, p > 0.5 && p < 0.96);
+          if (p > 0.97 && !cupPlayed) { cupPlayed = true; playOnce("cup", 0.45); }
+          if (p < 0.8) cupPlayed = false;
+        },
+      }, 0)
                 .to(q("[data-cue]"), { autoAlpha: 0, duration: 0.08 }, 0.02)
         .to(q("[data-tag]"), { autoAlpha: 1, y: 0, duration: 0.12, stagger: 0.06, ease: "power2.out" }, 0.74)
         .to({}, { duration: 0.1 });
 
       const onDone = () => ScrollTrigger.refresh();
       window.addEventListener("loader-done", onDone);
-      return () => window.removeEventListener("loader-done", onDone);
+      return () => {
+        window.removeEventListener("loader-done", onDone);
+        beans.stop();
+        pour.stop();
+      };
     },
     { scope: section },
   );
@@ -125,7 +147,7 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
   return (
     <section
       ref={section}
-      className="fixed-palette relative h-[100svh] min-h-[520px] overflow-hidden bg-[#EFD6C2]"
+      className="fixed-palette relative h-[100svh] min-h-[520px] overflow-hidden bg-[#F1D9C5]"
       aria-labelledby="hero-title"
     >
       <h1 id="hero-title" className="sr-only">
@@ -142,11 +164,18 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
           aria-hidden="true"
           tabIndex={-1}
           className="h-auto w-full max-w-none object-contain md:h-full md:object-cover"
+          style={{
+            // Feather every edge into the page colour so the film has no visible border
+            WebkitMaskImage: FEATHER,
+            maskImage: FEATHER,
+            WebkitMaskComposite: "source-in",
+            maskComposite: "intersect",
+          }}
         />
       </div>
 
       {/* Soft edges so the film melts into the page */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#EFD6C2] to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F1D9C5] to-transparent" />
 
       <div
         aria-hidden="true"

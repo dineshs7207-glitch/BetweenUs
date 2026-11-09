@@ -67,7 +67,7 @@ if (hasFfmpeg) {
       fs.writeFileSync(tmp, Buffer.from(await res.arrayBuffer()));
       execFileSync("ffmpeg", [
         "-y", "-loglevel", "error", "-i", tmp, "-an",
-        "-vf", `scale='min(${v.width ?? 1280},iw)':-2,unsharp=3:3:0.4`,
+        "-vf", `scale='min(${v.width ?? 1280},iw)':-2,unsharp=3:3:0.4${v.whiten ? ",colorlevels=rimax=0.94:gimax=0.94:bimax=0.94" : ""}`,
         "-c:v", "libx264", "-preset", "slow", "-crf", String(v.crf ?? 25),
         "-g", String(v.gop ?? 4), "-keyint_min", "1", "-pix_fmt", "yuv420p",
         "-movflags", "+faststart", out,
@@ -78,6 +78,29 @@ if (hasFfmpeg) {
     } catch (e) {
       failed++;
       console.warn(`video/${name}: ${e.message}`);
+    }
+  }
+}
+// Sound effects: audio: { name: url } → public/audio/<name>.mp3, gentle fades, quiet, 96 kbps
+if (hasFfmpeg) {
+  const adir = path.join(root, "public/audio");
+  fs.mkdirSync(adir, { recursive: true });
+  for (const [name, url] of Object.entries(sources.audio ?? {})) {
+    const out = path.join(adir, `${name}.mp3`);
+    if (fs.existsSync(out)) { skipped++; continue; }
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const tmp = path.join(adir, `${name}.src.mp3`);
+      fs.writeFileSync(tmp, Buffer.from(await res.arrayBuffer()));
+      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", tmp, "-ac", "1",
+        "-af", "afade=t=in:d=0.12,loudnorm=I=-26:TP=-3,areverse,afade=t=in:d=0.35,areverse",
+        "-b:a", "96k", out]);
+      fs.unlinkSync(tmp);
+      ok++;
+    } catch (e) {
+      failed++;
+      console.warn(`audio/${name}: ${e.message}`);
     }
   }
 }

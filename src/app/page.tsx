@@ -66,7 +66,8 @@ export default function Home() {
 
   // Higgsfield films, downloaded by `npm run photos` (see scripts/photo-sources.json)
   const heroFilm = publicFileExists("video/hero-swirl.mp4");
-  const splits = drinks.map((x) => x.slug).filter((s) => publicFileExists(`video/split-${s}.mp4`));
+  const grinderFilm = publicFileExists("video/grinder.mp4");
+  const clips = drinks.map((x) => x.slug).filter((s) => publicFileExists(`video/drink-${s}.mp4`));
 
   const row = (photos: typeof roomRowOne) => photos.map((p) => ({ ...p, src: g(p.file) }));
 
@@ -79,8 +80,8 @@ export default function Home() {
         ) : (
           <Hero />
         )}
-        <Intro />
-        <SignaturePours splits={splits} />
+        <Intro film={grinderFilm ? { src: withBase("/video/grinder.mp4"), poster: withBase("/video/grinder.jpg") } : null} />
+        <SignaturePours clips={clips} />
         <FieldNotes notes={notes} />
         <NewSignatures src={g("ube-collection.webp")} />
         <TheRoom rowOne={row(roomRowOne)} rowTwo={row(roomRowTwo)} />

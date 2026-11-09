@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SoundToggle from "@/components/SoundToggle";
 import { site } from "@/lib/site";
 import { withBase } from "@/lib/base";
 
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Nav />
           {children}
           <Footer />
+          <SoundToggle />
         </SmoothScroll>
         <script
           type="application/ld+json"

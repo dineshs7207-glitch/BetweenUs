@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { site } from "@/lib/site";
-import { lockScroll } from "./SmoothScroll";
+import { lockScroll, resetToTop } from "./SmoothScroll";
 import { withBase } from "@/lib/base";
 
 const SEEN_KEY = "betwen-intro-seen";
@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-/** Intro film: plays once per browser session, then the curtain lifts. */
+/** Intro: the BB monogram fills like a cup on every visit, then the curtain lifts. */
 export default function Loader() {
   const root = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -34,7 +34,9 @@ export default function Loader() {
       sessionStorage.setItem(SEEN_KEY, "1");
     } catch {}
     const finish = () => {
+      resetToTop();
       lockScroll(false);
+      window.setTimeout(resetToTop, 30);
       setGone(true);
       window.dispatchEvent(new Event("loader-done"));
     };
@@ -75,7 +77,11 @@ export default function Loader() {
       onProgress(new CustomEvent("hero-progress", { detail: window.__heroProgress }));
     }
 
-    if (seen || reduced) {
+    // Every visit starts at the top, on the hero
+    resetToTop();
+    void seen;
+
+    if (reduced) {
       setMode("quick");
       filmDone.current = true;
       framesDone.current = true;
@@ -140,7 +146,16 @@ export default function Loader() {
               aria-hidden="true"
             />
           ) : (
-            <PourMark />
+            <div className="flex flex-col items-center">
+              <PourMark />
+              <p className="mt-8 text-[clamp(22px,3vw,34px)] font-extralight tracking-[0.22em] opacity-0 [animation:loader-word_.9s_ease-out_1.1s_forwards]">
+                Betwēn Us
+              </p>
+              <p className="mt-2 font-serif text-[clamp(15px,1.6vw,19px)] italic text-fixed-porcelain/70 opacity-0 [animation:loader-word_.9s_ease-out_1.5s_forwards]">
+                for pauses and conversations in betwēn
+              </p>
+              <style>{`@keyframes loader-word { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }`}</style>
+            </div>
           ))}
       </div>
       <div className="flex items-end justify-between px-5 pb-[max(24px,env(safe-area-inset-bottom))] text-[15px] md:px-8">

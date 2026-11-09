@@ -6,6 +6,9 @@ export type Drink = {
   description: string;
   bg: string;
   fg: string;
+  /** Soft page tint behind the drink in "Choose your drink", and the colour of its giant name */
+  tint: string;
+  ink: string;
   /** Liquid layers, bottom to top. Heights are fractions of the glass. */
   layers: [Layer, Layer, Layer];
   ice: boolean;
@@ -19,6 +22,8 @@ export const drinks: Drink[] = [
     name: "Orange Cold Brew",
     description: "Citrusy cold brew infused with refreshing orange and bold coffee notes.",
     bg: "#F27A1D",
+    tint: "#FBE0C6",
+    ink: "#B4500F",
     fg: "#2E1004",
     layers: [
       { color: "#FFA43A", height: 0.42 },
@@ -32,6 +37,8 @@ export const drinks: Drink[] = [
     name: "Cranberry Cold Brew",
     description: "Cold brew with added cranberry juice.",
     bg: "#A8102F",
+    tint: "#F7D7DC",
+    ink: "#8E1230",
     fg: "#FFF1EE",
     layers: [
       { color: "#D21E45", height: 0.48 },
@@ -45,6 +52,8 @@ export const drinks: Drink[] = [
     name: "Midnight Mocha",
     description: "Dark cocoa layered with double espresso intensity.",
     bg: "#3C1F5E",
+    tint: "#E7DEEE",
+    ink: "#3C1F5E",
     fg: "#F3EAFE",
     layers: [
       { color: "#24120C", height: 0.5 },
@@ -59,6 +68,8 @@ export const drinks: Drink[] = [
     description:
       "Smooth cold brew blended with creamy coconut for a refreshing tropical coffee experience.",
     bg: "#1F6E6A",
+    tint: "#DCEDE7",
+    ink: "#1F6E6A",
     fg: "#EFFFFC",
     layers: [
       { color: "#F4EFE6", height: 0.4 },
@@ -73,6 +84,8 @@ export const drinks: Drink[] = [
     description:
       "Espresso blended with creamy milk and rich Biscoff flavour for a smooth caramelised finish.",
     bg: "#B5652A",
+    tint: "#F5E0C8",
+    ink: "#94501E",
     fg: "#FFF6EC",
     layers: [
       { color: "#E6CBA8", height: 0.52 },
@@ -87,6 +100,8 @@ export const drinks: Drink[] = [
     description:
       "Caramelized white chocolate blended with espresso and crowned with sea salt foam.",
     bg: "#5A1A14",
+    tint: "#F1E2D8",
+    ink: "#5A1A14",
     fg: "#F6EEE3",
     layers: [
       { color: "#EAD9C2", height: 0.5 },

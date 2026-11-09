@@ -100,29 +100,32 @@
     "betwen-us-latte": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_035032_82c098a9-4e58-4740-8dd5-557ad36d40f6.png"
   },
   "videos": {
-    "split-biscoff-latte": {
-      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_041805_4c8192e8-f07e-4e2d-833c-6aa4cf8541a5.mp4",
-      "width": 900,
-      "gop": 2,
-      "crf": 26
-    },
-    "split-orange-cold-brew": {
-      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_041805_fb7998ab-b76a-472d-968b-271a7e860007.mp4",
-      "width": 900,
-      "gop": 2,
-      "crf": 26
-    },
-    "split-cranberry-cold-brew": {
-      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_041805_37980eaf-dd6a-4129-84a0-c2164d79b62b.mp4",
-      "width": 900,
-      "gop": 2,
-      "crf": 26
-    },
     "hero-swirl": {
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_042026_bcee0aff-d5ef-4e4f-87e1-94d1ebb84dfe.mp4",
       "width": 1600,
       "gop": 4,
       "crf": 24
+    },
+    "drink-orange-cold-brew": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044128_ce6f9a74-eb6f-428c-909d-ba0ce6296919.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
+    },
+    "drink-cranberry-cold-brew": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044330_6de9d17f-9943-4abf-a696-299e8cc1387e.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
     }
+  },
+  "audio": {
+    "beans": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_043824_16d75f51-a9bc-4e16-b8b1-e2151b0db281.mp3",
+    "pour": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_043824_df3f4c2b-cca0-401f-a3f1-bfea3448e882.mp3",
+    "ice": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_043824_33302c2f-2515-41c5-8c59-6e5202c3c679.mp3",
+    "grind": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_043824_0ade9741-d26f-4a3c-b6cd-22fa48e454ed.mp3",
+    "cup": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_043824_2cf7fad4-3e06-4ea3-a534-15404533b355.mp3"
   }
 }
