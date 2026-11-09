@@ -119,6 +119,40 @@
       "gop": 2,
       "crf": 25,
       "whiten": true
+    },
+    "drink-biscoff-latte": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044330_2aa32c78-394a-4975-8502-999f76d6ef12.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
+    },
+    "drink-midnight-mocha": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044330_d7cc7024-2401-4b8a-b546-908c52c54061.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
+    },
+    "drink-coconut-cold-brew": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044514_a9438d25-76de-4fb0-846f-7ecd463e6699.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
+    },
+    "drink-betwen-us-latte": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044514_6438a2b9-6e79-4d97-95e0-6dc3135071aa.mp4",
+      "width": 960,
+      "gop": 2,
+      "crf": 25,
+      "whiten": true
+    },
+    "grinder": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_044514_bb52d83b-f549-463d-b253-8511a1d6a5ad.mp4",
+      "width": 1440,
+      "gop": 3,
+      "crf": 24
     }
   },
   "audio": {

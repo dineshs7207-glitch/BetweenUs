@@ -20,7 +20,13 @@ export function lockScroll(locked: boolean) {
 
 /** Jump straight to the top (every visit starts on the hero). */
 export function resetToTop() {
-  try { history.scrollRestoration = "manual"; } catch {}
+  try {
+    history.scrollRestoration = "manual";
+    // A #section in the address would make the browser jump past the hero
+    if (location.hash && location.pathname.replace(/\/$/, "").split("/").length <= 2) {
+      history.replaceState(history.state, "", location.pathname + location.search);
+    }
+  } catch {}
   lenis?.scrollTo(0, { immediate: true, force: true });
   window.scrollTo(0, 0);
 }

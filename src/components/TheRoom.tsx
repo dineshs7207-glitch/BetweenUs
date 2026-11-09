@@ -8,7 +8,7 @@ import Photo from "./Photo";
 type P = PhotoT & { src: string | null };
 
 const tints = ["#F6EEE3", "#EFE6D4", "#E7EEDF", "#F3E3D0", "#E6EBD9", "#F7E3E0"];
-const GAP = 1000; // px between photos along the camera axis
+const GAP = 850; // px between photos along the camera axis
 
 /**
  * The room: a camera walks through the café. Photos hang in 3D space at
@@ -104,7 +104,7 @@ export default function TheRoom({ rowOne, rowTwo }: { rowOne: P[]; rowTwo: P[] }
               ref={(el) => {
                 cards.current[i] = el;
               }}
-              className="absolute left-1/2 top-1/2 w-[min(64vw,300px)] will-change-transform md:w-[34vw] md:max-w-[560px]"
+              className="absolute left-1/2 top-1/2 w-[min(72vw,340px)] will-change-transform md:w-[42vw] md:max-w-[720px]"
               style={{ opacity: 0 }}
             >
               <Photo
