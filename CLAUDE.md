@@ -6,7 +6,7 @@ why, what's left, and how to get it running.
 
 - **Owner:** Dinesh Sarikonda (GitHub `dineshs7207-glitch`)
 - **Repo:** https://github.com/dineshs7207-glitch/BetweenUs
-- **Working branch:** `claude/loving-mccarthy-tw913v` (currently the repo's only and default branch; there is no `main` yet)
+- **Working branch:** `claude/loving-mccarthy-tw913v` (the default branch; there is no `main` yet. `gh-pages` holds only the built site)
 - **Live site:** https://dineshs7207-glitch.github.io/BetweenUs/ (GitHub Pages via Actions)
 - **Original spec:** [`docs/BRIEF.md`](docs/BRIEF.md). Treat it as the design source of
   truth for colours, fonts, copy, section order and behaviour. This file records what
@@ -93,7 +93,11 @@ npm run build:pages    # static export into ./out, served under /BetweenUs (what
 Deployed by `.github/workflows/deploy-pages.yml` on every push to
 `claude/loving-mccarthy-tw913v` or `main` (or run it manually from the Actions tab).
 The workflow typechecks, builds with `STATIC_EXPORT=1` and
-`NEXT_PUBLIC_BASE_PATH=/BetweenUs`, and deploys `./out`. Because the site lives under
+`NEXT_PUBLIC_BASE_PATH=/BetweenUs`, and force-pushes `./out` to the **`gh-pages`
+branch**; GitHub Pages serves that branch (Pages source = "Deploy from a branch",
+gh-pages / root). Never edit `gh-pages` by hand: it's regenerated on every deploy.
+(The workflow token can't switch Pages on by itself; Pages was switched on by the
+first push of `gh-pages`.) Because the site lives under
 a sub-path, **any raw public-file path (img src, CSS url, video src) must go through
 `withBase()` from `src/lib/base.ts`**; `next/link` hrefs are prefixed automatically.
 
