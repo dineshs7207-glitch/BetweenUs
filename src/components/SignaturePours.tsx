@@ -17,6 +17,9 @@ import OrderButtons from "./OrderButtons";
  */
 
 const STAGE_BG = "#F3DCC3";
+// Soft square edges so the clip's backdrop melts into the stage
+const EDGE_FADE =
+  "linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 4%, #000 92%, transparent)";
 const clamp = (x: number) => Math.min(1, Math.max(0, x));
 const ease = (x: number) => x * x * (3 - 2 * x);
 const shortName = (name: string) => name.replace(/ (Cold Brew|Latte)$/, "");
@@ -160,8 +163,10 @@ export default function SignaturePours({ splits = [] }: { splits?: string[] }) {
               className="absolute inset-0 will-change-transform"
               style={{
                 opacity: k === 0 ? 1 : 0,
-                WebkitMaskImage: "radial-gradient(closest-side, #000 72%, transparent 100%)",
-                maskImage: "radial-gradient(closest-side, #000 72%, transparent 100%)",
+                WebkitMaskImage: EDGE_FADE,
+                maskImage: EDGE_FADE,
+                WebkitMaskComposite: "source-in",
+                maskComposite: "intersect",
               }}
             >
               {hasClip ? (

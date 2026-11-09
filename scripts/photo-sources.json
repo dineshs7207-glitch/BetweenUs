@@ -117,6 +117,12 @@
       "width": 900,
       "gop": 2,
       "crf": 26
+    },
+    "hero-swirl": {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LauN9Q9jzsnnIRwfKAjtqHSvEs/hf_20261109_042026_bcee0aff-d5ef-4e4f-87e1-94d1ebb84dfe.mp4",
+      "width": 1600,
+      "gop": 4,
+      "crf": 24
     }
   }
 }
