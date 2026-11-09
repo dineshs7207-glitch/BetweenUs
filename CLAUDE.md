@@ -225,7 +225,13 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
   Paneer). Desserts carry `diet: veg|nonveg` from the printed menu's green/red marks.
   Bharwan Paneer Tikka, Kung Pao Rice Bowl and the three mango desserts have empty
   descriptions (TODO). Achari Caesar: "Our Caesar, reinvented with an Indian twist. With chicken." (from the café's poster).
-- **Signature pours:** six drinks with exact colours from the brief. The 3D glass:
+- **Signature pours (redesigned):** a dark spotlit product stage after the owner's
+  "Glacé" reference: real drink photos (the Higgsfield menu shots with the background
+  removed by Higgsfield's background remover, 1 credit each, URLs in
+  `scripts/photo-sources.json` → `public/drinks/<slug>.webp`), a giant ghost name, SVG
+  coffee beans at three depths, the spotlight tinted by each drink's `bg`, thumbnails to
+  jump between drinks. Scroll is scrubbed, no snapping. `GlassScene.tsx` is no longer used.
+- **(Old) Signature pours:** six drinks with exact colours from the brief. The 3D glass:
   the liquids render after the glass's back wall (`renderOrder`), and the front wall is a
   thin 0.08 sheen, so the drink colours read true (at the brief's single 0.22 white
   wall, the dark layers looked grey).

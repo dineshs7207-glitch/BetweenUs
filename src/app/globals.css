@@ -141,3 +141,8 @@ html.lenis body {
     scroll-behavior: auto !important;
   }
 }
+
+@keyframes sigIn {
+  from { opacity: 0.2; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
