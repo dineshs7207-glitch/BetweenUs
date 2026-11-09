@@ -13,16 +13,7 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --porcelain: 26 14 11;
-    --oat: 42 26 21;
-    --ink: 244 233 222;
-    --maroon: 237 187 166;
-    --on-maroon: 42 23 20;
-    color-scheme: dark;
-  }
-}
+/* Always the bright porcelain theme: the site ignores the device's dark mode on purpose. */
 
 html {
   -webkit-text-size-adjust: 100%;

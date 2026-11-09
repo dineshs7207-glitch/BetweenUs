@@ -29,6 +29,21 @@ jobs:
 
       - run: npm ci
 
+      - name: Download dish photos (Higgsfield) into public/menu
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          npm run photos
+
+      - name: Save new photos to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/menu
+          if ! git diff --cached --quiet; then
+            git commit -qm "Add dish photos from Higgsfield"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
+
       - name: Typecheck
         run: npm run typecheck
 

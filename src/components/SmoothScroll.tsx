@@ -38,7 +38,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (prefersReducedMotion()) return;
 
-    const instance = new Lenis({ lerp: 0.1, anchors: { offset: -72 } });
+    const instance = new Lenis({ lerp: 0.14, wheelMultiplier: 1.1, touchMultiplier: 1.4, anchors: { offset: -72 } });
     lenis = instance;
     if (locks > 0) instance.stop();
 

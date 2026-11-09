@@ -1,23 +1,23 @@
-/** Real café stills (from the café's interior reels). Files live in /public/gallery. */
+/** Real café stills (from the café's own reels). Files live in /public/gallery. */
 export type Photo = { file: string; alt: string; label: string };
 
 export const roomRowOne: Photo[] = [
-  { file: "dining-hall.webp", label: "Dining hall", alt: "The main dining hall under the maroon ceiling, with rattan pendant lights" },
-  { file: "planter-booths.webp", label: "Planter booths", alt: "Booth seating separated by tall planters full of green plants" },
-  { file: "staircase.webp", label: "Staircase", alt: "The staircase leading up to the first floor" },
-  { file: "teal-corner.webp", label: "Teal corner", alt: "A corner table with teal chairs by the window" },
-  { file: "arched-window.webp", label: "Arched window", alt: "An arched window letting daylight onto a table for two" },
-  { file: "main-floor.webp", label: "Main floor", alt: "The main floor with its checkered tiles and wooden tables" },
-  { file: "coffee-bar.webp", label: "Coffee bar", alt: "The coffee bar counter with cups lined up" },
+  { file: "hall.webp", label: "Main hall", alt: "The main hall under the maroon ceiling, with rattan pendant lights and red banquettes" },
+  { file: "dining.webp", label: "Arched dining room", alt: "The arched dining room with its cream and red checkered floor" },
+  { file: "stairs.webp", label: "Staircase", alt: "The open staircase leading up to the first floor" },
+  { file: "pendants.webp", label: "Glass pendants", alt: "Glass pendant lights hanging over the stairwell" },
+  { file: "logo-wall.webp", label: "The Betwēn Us wall", alt: "The Betwēn Us logo on the café wall" },
+  { file: "machine.webp", label: "Espresso bar", alt: "The espresso machine at the coffee bar" },
+  { file: "cups.webp", label: "Our cups", alt: "Betwēn Us cups stacked at the counter" },
 ];
 
 export const roomRowTwo: Photo[] = [
-  { file: "espresso-machine.webp", label: "Espresso machine", alt: "The espresso machine mid-pour at the coffee bar" },
-  { file: "garden-terrace.webp", label: "Garden terrace", alt: "Outdoor tables on the garden terrace among plants" },
-  { file: "pendant-wall.webp", label: "Pendant wall", alt: "A wall of woven rattan pendant lights" },
-  { file: "balcony.webp", label: "Balcony", alt: "Seats on the balcony overlooking the street" },
-  { file: "wood-fire-oven.webp", label: "Wood-fire oven", alt: "The wood-fire oven glowing in the kitchen" },
-  { file: "arches-night.webp", label: "Arches at night", alt: "The café's arches lit up at night" },
+  { file: "terrace.webp", label: "Garden terrace", alt: "Outdoor tables on the leafy garden terrace" },
+  { file: "courtyard.webp", label: "Courtyard", alt: "Courtyard seating among plants" },
+  { file: "strawberry-matcha.webp", label: "Strawberry matcha", alt: "Matcha being poured over strawberry and milk in a clear cup" },
+  { file: "matcha-whisk.webp", label: "Matcha, whisked", alt: "Matcha being whisked to order" },
+  { file: "cold-drink.webp", label: "Something cold", alt: "A cold drink at the bar" },
+  { file: "pizza.webp", label: "From the kitchen", alt: "A pizza being prepared in the kitchen" },
 ];
 
 export const loungePhoto: Photo = {
@@ -27,7 +27,7 @@ export const loungePhoto: Photo = {
 };
 
 export const visitPhoto: Photo = {
-  file: "arches-night.webp",
-  label: "Arches at night",
-  alt: "The café's arched front lit up at night, Kondapur",
+  file: "terrace.webp",
+  label: "Garden terrace",
+  alt: "The Betwēn Us garden terrace, Kondapur",
 };

@@ -43,7 +43,7 @@ export default function SignaturePours() {
     gsap.to(section.current, {
       backgroundColor: drink.bg,
       color: drink.fg,
-      duration: prefersReducedMotion() ? 0 : 0.7,
+      duration: prefersReducedMotion() ? 0 : 0.45,
       ease: "power2.out",
       overwrite: "auto",
     });
@@ -56,17 +56,11 @@ export default function SignaturePours() {
       trigger.current = ScrollTrigger.create({
         trigger: section.current,
         start: "top top",
-        end: () => `+=${window.innerHeight * 0.7 * n}`,
+        end: () => `+=${window.innerHeight * 0.55 * n}`,
         pin: true,
         scrub: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-        snap: {
-          snapTo: 1 / (n - 1),
-          duration: { min: 0.2, max: 0.6 },
-          delay: 0.08,
-          ease: "power2.inOut",
-        },
         onUpdate: (self) => {
           const i = Math.round(self.progress * (n - 1));
           setActive((prev) => (prev === i ? prev : i));
@@ -104,13 +98,13 @@ export default function SignaturePours() {
             Signature pours
           </h2>
           <div className="relative mt-3 min-h-[200px] md:min-h-[300px]" aria-live="polite">
-            <AnimatePresence mode="wait" initial={false}>
+            <AnimatePresence mode="popLayout" initial={false}>
               <motion.div
                 key={drink.slug}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0.35, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -24 }}
-                transition={{ duration: 0.45, ease }}
+                exit={{ opacity: 0, y: -10, transition: { duration: 0.12 } }}
+                transition={{ duration: 0.3, ease }}
               >
                 <p className="text-drink font-extralight tracking-[-0.02em]">{drink.name}</p>
                 <p className="mt-5 max-w-[34ch] font-serif text-[clamp(22px,2.2vw,30px)] italic leading-snug opacity-90">

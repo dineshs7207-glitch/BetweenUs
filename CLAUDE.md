@@ -231,9 +231,13 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
   wall, the dark layers looked grey).
 - **Ube collection** section: added from the café's "Purple Dream" poster (not in the
   brief). The drink names are unknown, so they aren't on the menu.
-- **Photos:** only two real images exist (the Achari salad crop and the Ube poster). Every
-  other photo slot renders a branded tinted tile until files are added under the names in
-  `lib/gallery.ts` / `public/dishes` / `public/menu`. `page.tsx` and `menu/page.tsx`
+- **Photos:** 14 real café stills (cut from the café's own reels) are in `public/gallery`
+  (names in `lib/gallery.ts`), and five real poster crops are in `public/dishes` for the Field
+  Notes cards. The 90 dish photos were generated in Higgsfield (`gpt_image_2_6`, cream
+  backdrop style) and their URLs live in `scripts/photo-sources.json`; the deploy workflow
+  runs `npm run photos`, which downloads them into `public/menu/<slug>.webp` and commits
+  them back, so they end up self-hosted in the repo. Any slot without a file still renders
+  a branded tinted tile. `page.tsx` and `menu/page.tsx`
   check which files exist at build time, so missing photos never 404.
 - **Swiggy/Zomato:** these currently link to a search on each site (TODO: the real listing URLs).
 
@@ -258,6 +262,9 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
 | Intro film `logo-pour.mp4` | Coded monogram "pour fill" until the file exists | File not provided |
 | No Ube section | Ube "Purple Dream" section | The user supplied the café's poster |
 | Not specified | Veg/non-veg marks; "Pause photos" button | From the printed menu; WCAG pause control |
+| Dark mode swap | Always the light porcelain theme | The owner wants a bright white site; dark mode made it brown |
+| Signature pours snap per drink | Free scroll, 0.55 viewport per drink, text never fades out | Snapping felt like the page was fighting the wheel and the drink name vanished mid-change |
+| Hero pin `+=260%` | `+=180%`, Lenis lerp 0.14 | The long video scrub felt heavy and laggy |
 
 ## 10. Open items / next steps (ask the user before acting)
 

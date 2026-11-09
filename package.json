@@ -11,6 +11,7 @@
     "frames": "bash scripts/extract-frames.sh",
     "prompts": "node scripts/make-higgsfield-prompts.mjs",
     "hero:self-host": "node scripts/self-host-hero.mjs",
+    "photos": "node scripts/fetch-photos.mjs",
     "build:pages": "STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/BetweenUs next build"
   },
   "dependencies": {

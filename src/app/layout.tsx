@@ -43,10 +43,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FFFDF9" },
-    { media: "(prefers-color-scheme: dark)", color: "#1A0E0B" },
-  ],
+  themeColor: "#FFFDF9",
 };
 
 const jsonLd = {
