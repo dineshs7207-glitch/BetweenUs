@@ -211,7 +211,18 @@ Reduced motion shows the arch full screen on the last frame with the tagline.
 
 **Fallback order:** `site.hero.video` → frames (`hero.frameCount > 0`) → coded pour (`lib/pour.ts`).
 
-**Known gap:** the films are on Higgsfield's CDN, not in the repo, because the build
+
+**Hero v2 (current, Nov 2026): bean swirl.** `HeroSwirl.tsx`, used whenever
+`public/video/hero-swirl.mp4` exists (otherwise the old `Hero.tsx` arch film).
+Keyframes `gpt_image_2_6` high 16:9 with the BB logo reference: start job
+`31c0ec32-51dc-48a6-a9ad-9f59f5916e69` (giant maroon BETWĒN US wordmark on cream, beans
+spiralling into the BB cup), end job `b34d1ee1-a11a-49a4-8a8b-4a3ed66f49ca` (latte + steam);
+film `kling3_0` pro 5 s, job `bcee0aff-d5ef-4e4f-87e1-94d1ebb84dfe`. The wordmark is part of
+the film. Phones show the same 16:9 film letterboxed (a 9:16 version would be ~20 credits).
+Films are listed under `videos` in `scripts/photo-sources.json`; the deploy workflow downloads
+them, re-encodes with dense keyframes (`-g 2–4`, no audio) into `public/video/` and commits them.
+
+**Known gap (old arch film only):** the films are on Higgsfield's CDN, not in the repo, because the build
 session's network blocked that host. Run `npm run hero:self-host` from a normal
 machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, then commit.
 
@@ -225,7 +236,14 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
   Paneer). Desserts carry `diet: veg|nonveg` from the printed menu's green/red marks.
   Bharwan Paneer Tikka, Kung Pao Rice Bowl and the three mango desserts have empty
   descriptions (TODO). Achari Caesar: "Our Caesar, reinvented with an Indian twist. With chicken." (from the café's poster).
-- **Signature pours (redesigned):** a dark spotlit product stage after the owner's
+- **Choose your drink (current Signature pours, Nov 2026):** cream stage after the POUR / PLAY
+  reference: a giant bold drink name slides behind; drinks with a split clip
+  (`public/video/split-<slug>.mp4`) fly apart into their layers on scroll and the next drink
+  re-assembles (its clip reversed). Clips: the existing menu photo as start frame, a
+  `gpt_image_2_6` "exploded layers" edit as end frame, `kling3_0` pro 5 s 1:1. Done for
+  Biscoff Latte, Orange Cold Brew, Cranberry Cold Brew; the other three cross-fade their menu
+  photo until they get clips (~23 credits for all three).
+- **Signature pours (dark version, replaced):** a dark spotlit product stage after the owner's
   "Glacé" reference: real drink photos (the Higgsfield menu shots with the background
   removed by Higgsfield's background remover, 1 credit each, URLs in
   `scripts/photo-sources.json` → `public/drinks/<slug>.webp`), a giant ghost name, SVG
@@ -270,6 +288,7 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
 | Not specified | Veg/non-veg marks; "Pause photos" button | From the printed menu; WCAG pause control |
 | Dark mode swap | Always the light porcelain theme | The owner wants a bright white site; dark mode made it brown |
 | Signature pours snap per drink | Free scroll, 0.55 viewport per drink, text never fades out | Snapping felt like the page was fighting the wheel and the drink name vanished mid-change |
+| Hero = arch + film | Full-screen bean-swirl film with the wordmark baked in (HeroSwirl) | Owner picked it from preview stills (POUR / PLAY reference) |
 | Hero pin `+=260%` | `+=180%`, Lenis lerp 0.14 | The long video scrub felt heavy and laggy |
 
 ## 10. Open items / next steps (ask the user before acting)
