@@ -126,7 +126,7 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
   return (
     <section
       ref={section}
-      className="fixed-palette relative h-[100svh] min-h-[520px] overflow-hidden bg-[#F2E8DC]"
+      className="fixed-palette relative h-[100svh] min-h-[520px] overflow-hidden bg-[#EFD6C2]"
       aria-labelledby="hero-title"
     >
       <h1 id="hero-title" className="sr-only">
@@ -147,7 +147,7 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
       </div>
 
       {/* Soft edges so the film melts into the page */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F2E8DC] to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#EFD6C2] to-transparent" />
 
       <div
         aria-hidden="true"
