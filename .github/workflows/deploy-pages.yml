@@ -48,7 +48,8 @@ jobs:
         run: npm run typecheck
 
       - name: Build static site
-        run: npm run build
+        # next/font fetches Google Fonts at build time; retry if that download flakes
+        run: npm run build || (sleep 20 && npm run build) || (sleep 45 && npm run build)
         env:
           STATIC_EXPORT: "1"
           NEXT_PUBLIC_BASE_PATH: /BetweenUs
