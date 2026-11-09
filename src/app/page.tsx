@@ -1,5 +1,7 @@
 import Loader from "@/components/Loader";
 import Hero from "@/components/Hero";
+import HeroSwirl from "@/components/HeroSwirl";
+import { drinks } from "@/lib/drinks";
 import Intro from "@/components/Intro";
 import SignaturePours from "@/components/SignaturePours";
 import FieldNotes, { type FieldNote } from "@/components/FieldNotes";
@@ -7,7 +9,7 @@ import NewSignatures from "@/components/NewSignatures";
 import TheRoom from "@/components/TheRoom";
 import Lounge from "@/components/Lounge";
 import Visit from "@/components/Visit";
-import { listPublic } from "@/lib/assets";
+import { listPublic, publicFileExists } from "@/lib/assets";
 import { withBase } from "@/lib/base";
 import { loungePhoto, roomRowOne, roomRowTwo, visitPhoto } from "@/lib/gallery";
 
@@ -62,15 +64,23 @@ export default function Home() {
     },
   ];
 
+  // Higgsfield films, downloaded by `npm run photos` (see scripts/photo-sources.json)
+  const heroFilm = publicFileExists("video/hero-swirl.mp4");
+  const splits = drinks.map((x) => x.slug).filter((s) => publicFileExists(`video/split-${s}.mp4`));
+
   const row = (photos: typeof roomRowOne) => photos.map((p) => ({ ...p, src: g(p.file) }));
 
   return (
     <>
       <Loader />
       <main id="main">
-        <Hero />
+        {heroFilm ? (
+          <HeroSwirl src={withBase("/video/hero-swirl.mp4")} poster={withBase("/video/hero-swirl.jpg")} />
+        ) : (
+          <Hero />
+        )}
         <Intro />
-        <SignaturePours />
+        <SignaturePours splits={splits} />
         <FieldNotes notes={notes} />
         <NewSignatures src={g("ube-collection.webp")} />
         <TheRoom rowOne={row(roomRowOne)} rowTwo={row(roomRowTwo)} />

@@ -51,4 +51,34 @@ for (const { map, dir, width, alpha } of jobs) {
     }
   }
 }
+// Films (hero + drink "split" clips): re-encoded with dense keyframes so they
+// scrub smoothly backwards and forwards, no audio, plus a first-frame poster.
+//   videos: { name: { url, width, gop, crf } } → public/video/<name>.mp4 + <name>.jpg
+if (hasFfmpeg) {
+  const vdir = path.join(root, "public/video");
+  fs.mkdirSync(vdir, { recursive: true });
+  for (const [name, v] of Object.entries(sources.videos ?? {})) {
+    const out = path.join(vdir, `${name}.mp4`);
+    if (fs.existsSync(out)) { skipped++; continue; }
+    try {
+      const res = await fetch(v.url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const tmp = path.join(vdir, `${name}.src.mp4`);
+      fs.writeFileSync(tmp, Buffer.from(await res.arrayBuffer()));
+      execFileSync("ffmpeg", [
+        "-y", "-loglevel", "error", "-i", tmp, "-an",
+        "-vf", `scale='min(${v.width ?? 1280},iw)':-2,unsharp=3:3:0.4`,
+        "-c:v", "libx264", "-preset", "slow", "-crf", String(v.crf ?? 25),
+        "-g", String(v.gop ?? 4), "-keyint_min", "1", "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart", out,
+      ]);
+      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", out, "-frames:v", "1", "-q:v", "3", path.join(vdir, `${name}.jpg`)]);
+      fs.unlinkSync(tmp);
+      ok++;
+    } catch (e) {
+      failed++;
+      console.warn(`video/${name}: ${e.message}`);
+    }
+  }
+}
 console.log(`photos: ${ok} downloaded, ${skipped} already present, ${failed} failed`);
