@@ -111,8 +111,7 @@ export default function HeroSwirl({ src, poster }: { src: string; poster: string
         },
       });
       tl.to(progress.current, { p: 1, duration: 0.86 }, 0)
-        .to(q("[data-film]"), { scale: 1.06, duration: 1, ease: "sine.inOut" }, 0)
-        .to(q("[data-cue]"), { autoAlpha: 0, duration: 0.08 }, 0.02)
+                .to(q("[data-cue]"), { autoAlpha: 0, duration: 0.08 }, 0.02)
         .to(q("[data-tag]"), { autoAlpha: 1, y: 0, duration: 0.12, stagger: 0.06, ease: "power2.out" }, 0.74)
         .to({}, { duration: 0.1 });
 

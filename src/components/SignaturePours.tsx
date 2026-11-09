@@ -16,10 +16,10 @@ import OrderButtons from "./OrderButtons";
  * pieces (its clip played backwards). Drinks without a clip cross-fade.
  */
 
-const STAGE_BG = "#F3DCC3";
+const STAGE_BG = "#F0D6BA";
 // Soft square edges so the clip's backdrop melts into the stage
 const EDGE_FADE =
-  "linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 4%, #000 92%, transparent)";
+  "linear-gradient(to right, transparent, #000 20%, #000 80%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 84%, transparent)";
 const clamp = (x: number) => Math.min(1, Math.max(0, x));
 const ease = (x: number) => x * x * (3 - 2 * x);
 const shortName = (name: string) => name.replace(/ (Cold Brew|Latte)$/, "");
@@ -134,7 +134,7 @@ export default function SignaturePours({ splits = [] }: { splits?: string[] }) {
       id="signature"
       aria-labelledby="signature-title"
       className="fixed-palette relative h-[100svh] overflow-hidden text-ink"
-      style={{ background: `radial-gradient(ellipse 70% 70% at 50% 55%, #F8E6D2, ${STAGE_BG} 60%, #EED2B5)` }}
+      style={{ background: `radial-gradient(ellipse 70% 70% at 50% 50%, #F3DBC2, ${STAGE_BG} 55%, #EBCFB2)` }}
     >
       {/* Giant bold drink names, sliding behind the drink */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[22%] overflow-hidden md:top-1/2 md:-translate-y-1/2">
