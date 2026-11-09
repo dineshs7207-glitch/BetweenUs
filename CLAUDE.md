@@ -236,7 +236,20 @@ machine to copy them into `public/hero/` and rewrite `site.ts` to local paths, t
   Paneer). Desserts carry `diet: veg|nonveg` from the printed menu's green/red marks.
   Bharwan Paneer Tikka, Kung Pao Rice Bowl and the three mango desserts have empty
   descriptions (TODO). Achari Caesar: "Our Caesar, reinvented with an Indian twist. With chicken." (from the café's poster).
-- **Choose your drink (current Signature pours, Nov 2026):** cream stage after the POUR / PLAY
+- **Motion pass (Nov 2026, owner's corrections):** loader on every visit (BB pour + wordmark),
+  every load lands on the hero (hash stripped, `resetToTop()` in SmoothScroll); hero film edges
+  feathered into `#F1D9C5`; Intro = pinned word-by-word reveal + Higgsfield grinder exploding
+  (`public/video/grinder.mp4`); Purple Dream = page floods to ube purple, poster rises out of a
+  3D tilt, outlined ghost title, bubbles; The room = 3D camera fly-through of the café stills
+  (grid under reduced motion); Lounge = maroon doors swing open onto the room; Visit = "Come
+  over" fills with coffee, steam, parallax arch, drifting place-name band.
+- **Sound (`lib/sound.ts`, `SoundToggle.tsx`):** Higgsfield Mirelo SFX (beans, pour, ice, grind,
+  cup; 1.25 credits each) in `public/audio`, off until the visitor taps "Sound off", choice
+  remembered. Bean/pour/grind loops follow scroll speed (silent when still); ice clinks on a drink change.
+- **Choose your drink v2:** six clips, drinks tilted and floating on pure white (`whiten` in the
+  encode), blended with `mix-blend-multiply` so white becomes the per-drink `tint` from `drinks.ts`
+  and the giant name (in the drink's `ink`) shows around/through the glass. Files `drink-<slug>.mp4`.
+- **Choose your drink (v1, replaced):** cream stage after the POUR / PLAY
   reference: a giant bold drink name slides behind; drinks with a split clip
   (`public/video/split-<slug>.mp4`) fly apart into their layers on scroll and the next drink
   re-assembles (its clip reversed). Clips: the existing menu photo as start frame, a
